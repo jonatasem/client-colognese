@@ -1,0 +1,37 @@
+.container-about {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    
+    article {
+        width: calc(100% / 2 - 1.5rem);
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 0.5rem;
+            color: #845ec2;
+        }
+    }
+    .footer-left {
+        text-align: justify;
+
+        p {
+            margin: 1rem 0;
+        }
+    }
+    .footer-right {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .container-about {
+        flex-direction: column;
+
+        article {
+            width: 100%;
+        }
+    }
+}

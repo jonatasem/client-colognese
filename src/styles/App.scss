@@ -1,0 +1,31 @@
+
+//remove o ponto nas listas
+li {
+  list-style-type: none;
+}
+
+//mensagem de vazio
+.not-found {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+//remove o traço abaixo do link
+a {
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button {
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+input {
+  outline: 0;
+}

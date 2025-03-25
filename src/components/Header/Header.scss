@@ -1,0 +1,33 @@
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #845ec2;
+    color: white;
+
+    ul {
+        display: flex;
+        
+        li {
+            margin: 0 0 0 1rem;
+            
+            a {
+                color: white;
+                &:hover {
+                    color: silver;
+                }
+            }
+
+            button {
+                background-color: transparent;
+                border: transparent;
+                color: #c0c0c0;
+                font-size: 18px;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.container-cart {
+    padding: 1.5rem;
+    
+    .cart-header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart-center {
+        min-height: calc(100vh - 3rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            background-color: whitesmoke;
+            padding: 1rem;
+            width: 100%;
+            
+        }
+        .total-amount {
+            width: 100%;
+            text-align: end;
+            margin: 1rem 0;
+        }
+    }
+}

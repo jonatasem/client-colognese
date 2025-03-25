@@ -1,0 +1,44 @@
+.container-login {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://colognese-brigaderia.vercel.app/assets/fundo-CUeAjbHY.jpg");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .login-center {
+        padding:  1rem 5rem;
+        background-color: white;
+        border-radius: 3rem;
+        box-shadow: 1px 1px 5px silver;
+
+        img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+
+        button {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border: 1px solid silver;
+            background-color: transparent;
+            border-radius: 1rem;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .container-login {
+        .login-center {
+        }
+    }
+}
