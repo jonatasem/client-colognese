@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from '../../../axiosConfig';
 import { useCart } from '../../context/CartContext';
 import './ProductDetails.scss';
+import Waves from '../Waves/Waves';
 
 const ProductDetails = () => {
     const { id } = useParams(); // Obtém o ID do produto da URL
@@ -13,9 +14,7 @@ const ProductDetails = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                console.log('Buscando produto com ID:', id); // Verifica o ID
                 const response = await axios.get(`/products/${id}`);
-                console.log('Resposta da API:', response); // Verifica a resposta
                 setProduct(response.data);
             } catch (error) {
                 console.error('Erro ao buscar produto:', error);
@@ -37,14 +36,24 @@ const ProductDetails = () => {
 
     return (
         <section className='product-details'>
-            <article className="product-details-header">
+            <Waves />
+            <div className="details-head">
                 <h2>{product.name}</h2>
-                <img src={product.imageUrl} alt={product.name} />
-                <p>Preço: R$ {product.price.toFixed(2)}</p>
-                <p>{product.description}</p>
-                <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
-                {notification && <p className="notification">{notification}</p>} 
-            </article>
+                <Link to="/home">Voltar</Link>
+            </div>
+            <div className="details-center">
+                <article className="details-left">
+                    <img src={product.imageUrl} alt={product.name} />
+                    {notification && <p className="notification">{notification}</p>} 
+                </article>
+                <article className="details-right">
+                    <p><strong>Descrição: </strong>{product.description}</p>
+                    <div>
+                        <p><strong>Preço: </strong> R$ {product.price.toFixed(2)}</p>
+                        <button onClick={handleAddToCart}>Adicionar ao Carrinho</button>
+                    </div>
+                </article>
+            </div>
         </section>
     );
 };

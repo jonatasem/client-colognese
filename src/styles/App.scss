@@ -29,3 +29,14 @@ button {
 input {
   outline: 0;
 }
+
+
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #00b400;
+  color: white;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+}
